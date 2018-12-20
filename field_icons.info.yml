@@ -1,0 +1,5 @@
+name: Field Icons
+description: Provides a list of icons for add to any content type
+core: 8.x
+type: module
+package: field types

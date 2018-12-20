@@ -1,0 +1,71 @@
+@font-face {
+  font-family: 'SebastianFont';
+  src:  url('fonts/SebastianFont.eot?ao7yqp');
+  src:  url('fonts/SebastianFont.eot?ao7yqp#iefix') format('embedded-opentype'),
+    url('fonts/SebastianFont.ttf?ao7yqp') format('truetype'),
+    url('fonts/SebastianFont.woff?ao7yqp') format('woff'),
+    url('fonts/SebastianFont.svg?ao7yqp#SebastianFont') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'SebastianFont' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  font-size: 30px;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-fantasy:before {
+  content: "\e900";
+  color: #933ec5;
+}
+.icon-magic:before {
+  content: "\e900";
+  color: #933ec5;
+}
+.icon-action:before {
+  content: "\e901";
+  color: #ffda44;
+}
+.icon-gun:before {
+  content: "\e901";
+  color: #ffda44;
+}
+.icon-shoot:before {
+  content: "\e901";
+  color: #ffda44;
+}
+.icon-comedy:before {
+  content: "\e902";
+  color: #91dc5a;
+}
+.icon-fun:before {
+  content: "\e902";
+  color: #91dc5a;
+}
+.icon-joke:before {
+  content: "\e902";
+  color: #91dc5a;
+}
+.icon-adventure:before {
+  content: "\e903";
+  color: #006df0;
+}
+.icon-anime:before {
+  content: "\e904";
+  color: #d80027;
+}
+.icon-cartoon:before {
+  content: "\e904";
+  color: #d80027;
+}

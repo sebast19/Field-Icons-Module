@@ -1,0 +1,4 @@
+icon-styling:
+  css:
+    theme:
+      css/style.css: {}

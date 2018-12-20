@@ -1,0 +1,14 @@
+# node.type.add_icon.yml
+langcode: en
+status: true
+dependencies:
+  enforced:
+    module:
+      - field_icons 
+name: 'Add new Icon'
+type: add_icon
+description: 'Content type that can be used to provide additional <em>Icons</em> on <em>Field Type Icons</em>'
+help: ''
+new_revision: false
+preview_mode: 1
+display_submitted: true

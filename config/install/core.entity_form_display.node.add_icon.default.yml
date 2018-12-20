@@ -1,0 +1,29 @@
+# core.entity_form_display.node.add_icon.default.yml
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.add_icon.field_icon_label
+    - node.type.add_icon
+  module:
+    - user
+id: node.add_icon.default
+targetEntityType: node
+bundle: add_icon
+mode: default
+content:
+  field_icon_label:
+    type: string_textfield
+    weight: 1
+    region: content
+    label: above
+    settings:
+      size: 60
+      placeholder: 'Ex: Adventure, Action ...'
+    third_party_settings: {  }
+  links:
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden: {  }
