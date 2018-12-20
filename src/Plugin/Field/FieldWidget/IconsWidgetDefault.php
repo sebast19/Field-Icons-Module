@@ -27,10 +27,13 @@ class IconsWidgetDefault extends WidgetBase {
      */
     public function formElement(FieldItemListInterface $items, $delta, array $element, array &$form, FormStateInterface $form_state){
 
+        $value = isset($items[$delta]->icon_select) ? $items[$delta]->icon_select: ''; 
+
         $element['icon_select'] = [
             '#type' => 'select',
             '#description' => 'Add new content type of <strong><em>Add New Icon</em></strong> for add more icons to the list',
             '#empty_option' => t('-None-'),
+            '#default_value' => $value,
             '#options' => $this->getIcons(),
             '#title' => t('Icons'),
         ];

@@ -44,7 +44,7 @@ class FieldIconsItem extends FieldItemBase {
     public static function propertyDefinitions(FieldStorageDefinitionInterface $field_definition) {
         $properties = [];
         $properties['icon_select'] = DataDefinition::create('string')
-          ->setlabel(t('Icon'));
+          ->setlabel(t('Icons Field'));
 
         return $properties;
     }

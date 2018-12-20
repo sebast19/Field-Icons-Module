@@ -35,7 +35,7 @@ class IconsFormatterDefault extends FormatterBase {
                   'field_icons/icon-styling',
                 ],
               ],
-              '#markup' => '<span class="' . $item->icon_select . '"></span>',
+              '#markup' => '<i class="' . $item->icon_select . '"></i>',
             ];
 
             return $elements;
