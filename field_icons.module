@@ -1,0 +1,15 @@
+<?php
+
+/**
+ * implements hook_theme()
+ */
+
+ function field_icons_theme($existing, $type, $theme, $path) {
+   return [
+     'icons_template' => [
+       'variables' => [
+         'class_icon' => '',
+       ],
+     ],
+   ];   
+ }

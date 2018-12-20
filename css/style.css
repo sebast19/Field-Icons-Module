@@ -18,12 +18,29 @@
   font-variant: normal;
   text-transform: none;
   line-height: 1;
-  font-size: 30px;
 
   /* Better Font Rendering =========== */
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+
+/* own styles for the module field icons and twig template */
+
+.icon-container {
+  border: 1px solid lightgrey;
+  border-radius: 15px 0 15px 0;
+  height: 60px;
+  line-height: 60px;
+  text-align: center;
+  font-size: 25px;
+}
+
+.icon-container i {
+  font-size: 35px;
+  vertical-align: center;
+}
+
+/* styles of fonts */
 
 .icon-fantasy:before {
   content: "\e900";

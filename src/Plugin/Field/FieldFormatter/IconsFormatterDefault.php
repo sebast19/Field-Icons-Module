@@ -29,13 +29,8 @@ class IconsFormatterDefault extends FormatterBase {
           if (!empty($item->icon_select)) {
 
             $elements[$delta] = [
-              '#type' => 'markup',
-              '#attached' => [
-                'library' => [
-                  'field_icons/icon-styling',
-                ],
-              ],
-              '#markup' => '<i class="' . $item->icon_select . '"></i>',
+              '#theme' => 'icons_template',
+              '#class_icon' => $item->icon_select, 
             ];
 
             return $elements;
