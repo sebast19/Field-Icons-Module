@@ -14,10 +14,9 @@ description: '<strong>Important:</strong><br>
   Add new icons to the list of icons available in the <strong><em>Field Icons</em><strong>,
   in consideration of the following list of available icon names. 
   <ul>
-    <li>Adventure</li> 
-    <li>Action</li>
+    <li>Accion</li>
     <li>Fantasy</li>
-    <li>Anime</li>
+    <li>Terror</li>
     <li>Comedy</li>
   </ul>'
 required: true

@@ -55,7 +55,7 @@ class IconsWidgetDefault extends WidgetBase {
         
         // One default value in the select element.
         $icons = [
-            'icon-action' => 'Action',
+            'icon-accion' => 'Accion',
         ];  
 
         while ($icon_name = $icons_content_type->fetchAssoc()) {

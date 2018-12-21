@@ -1,9 +1,18 @@
-{# Attach the library of css with the classes of icons to render #}
+{# Attach the library of css with the classes of icons to show #}
 {{ attach_library('field_icons/icon-styling') }}
 
 <div class="icon-container">
-  <p>
+
+  {% if class_icon != 'uncategorized' %}
+
     <i class="{{ class_icon }}"></i>
-    <span>The category of this <em>Icons</em> is <strong>{{ class_icon }}</strong></span>
-  </p>
+    <span><strong><i>Category: </i> <em>{{ class_icon }}</em></span>
+
+  {% else %}
+
+    <i class="uncategorized"></i>
+    <span><strong><i>Category: </i> <em>Uncategorized</em></span>
+
+  {% endif %}  
+
 </div>

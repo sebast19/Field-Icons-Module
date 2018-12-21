@@ -11,8 +11,9 @@ use Drupal\Core\TypedData\DataDefinition;
  *
  * @FieldType(
  *     id = "field_icons_item",
- *     label = @Translation("Icons"),
+ *     label = @Translation("Icons Field"),
  *     description = "a filed to icons to content type",
+ *     category = @Translation("Icons"),
  *     default_widget = "icons_widget_default",
  *     default_formatter = "icons_formatter_default"
  * )

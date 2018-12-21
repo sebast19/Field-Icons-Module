@@ -37,8 +37,8 @@ class IconsFormatterDefault extends FormatterBase {
           }
 
           $elements[$delta] = [
-            '#type' => 'markup',
-            '#markup' => 'None icon selected',
+            '#theme' => 'icons_template',
+            '#class_icon' => 'uncategorized',
           ];
 
           return $elements;
