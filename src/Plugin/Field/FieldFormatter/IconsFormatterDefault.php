@@ -26,6 +26,11 @@ class IconsFormatterDefault extends FormatterBase {
 
         foreach ($items as $delta => $item) {
 
+          $elements[$delta] = [
+            '#theme' => 'icons_template',
+            '#class_icon' => 'uncategorized',
+          ];
+
           if (!empty($item->icon_select)) {
 
             $elements[$delta] = [
@@ -33,13 +38,7 @@ class IconsFormatterDefault extends FormatterBase {
               '#class_icon' => $item->icon_select, 
             ];
 
-            return $elements;
           }
-
-          $elements[$delta] = [
-            '#theme' => 'icons_template',
-            '#class_icon' => 'uncategorized',
-          ];
 
           return $elements;
             

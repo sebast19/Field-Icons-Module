@@ -8,7 +8,7 @@
    return [
      'icons_template' => [
        'variables' => [
-         'class_icon' => '',
+         'class_icon' => 'uncategorized',
        ],
      ],
    ];   

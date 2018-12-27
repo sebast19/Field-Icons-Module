@@ -5,8 +5,6 @@ namespace Drupal\field_icons\Plugin\Field\FieldWidget;
 use Drupal\Core\Field\FieldItemListInterface;
 use Drupal\Core\Field\WidgetBase;
 use Drupal\Core\Form\FormStateInterface;
-use Drupal\Core\Database\Connection;
-
 
 /**
  * PLugin implementation of the 'icons_widget_default'.
@@ -50,31 +48,45 @@ class IconsWidgetDefault extends WidgetBase {
      */
     private function getIcons() {
 
-        // Obtains the name typed in the content type add_icon
-        $icons_content_type = \Drupal::service('database')->query('SELECT field_icon_label_value FROM node__field_icon_label');
-        
-        // One default value in the select element.
+        // Set one default value in the select element.
+
         $icons = [
             'icon-accion' => 'Accion',
-        ];  
+        ];     
 
-        while ($icon_name = $icons_content_type->fetchAssoc()) {
+        // Obtains the name typed in the content type add_icon
+        $icons_content_type = \Drupal::service('database')->query('SELECT field_icon_label_target_id FROM node__field_icon_label')->fetchAll();
 
-            $label_icon = strtolower($icon_name['field_icon_label_value']);
+        // Load the entities taxonomy term
 
-            // Validation is in array the value obtained from the query.
-            if (in_array($label_icon, $icons)) {
-                continue;
-            } else {
+        if (count($icons_content_type) > 0) {
+            
+            foreach ($icons_content_type as $id_taxonomy) {
 
-                // Add icon to the list.
-                $icons += [
-                    'icon-' . $label_icon => ucfirst($label_icon),
-                ];
-
+                $tids[] = $id_taxonomy->field_icon_label_target_id;
+    
             }
-        }
 
+            $entities = \Drupal::entityTypeManager()
+					->getStorage('taxonomy_term')
+                    ->loadMultiple($tids);
+
+            foreach ($entities as $entity) {
+
+                if (in_array($entity->getName(), $icons)) {
+                    continue;
+                } else {
+    
+                    // Add icon to the list.
+                    $icons += [
+                        'icon-' . strtolower($entity->getName()) => ucfirst($entity->getName()),
+                    ];
+    
+                }
+            }         
+
+        }          
+ 
         return $icons;
 
     }
