@@ -1,0 +1,4 @@
+services:
+  field_icons.helper:
+    class: Drupal\field_icons\services\FieldIconHelper
+    arguments: ['@database', '@entity_type.manager']

@@ -32,25 +32,25 @@
   height: 50px;
   line-height: 50px;
   text-align: center;
-  font-size: 1.3em;
+  font-size: 1em;
 }
 
 /* styles of fonts */
 
 .icon-terror:before {
   content: "\e900";
-  color: #999999;
+  color: #1b1b1b;
 }
 .icon-adventure:before {
   content: "\e901";
-  color: rgb(236, 101, 22);
+  color: rgb(23, 177, 23);
 }
 .icon-uncategorized:before {
   content: "\e902";
 }
-.icon-animated:before {
+.icon-cartoon:before {
   content: "\e916";
-  color: rgb(40, 184, 21);
+  color: rgb(250, 236, 48);
 }
 .icon-fantasy:before {
   content: "\e997";

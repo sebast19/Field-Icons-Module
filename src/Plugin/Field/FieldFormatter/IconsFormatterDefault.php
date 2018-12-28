@@ -22,27 +22,31 @@ class IconsFormatterDefault extends FormatterBase {
      * {@inheritdoc}
      */
     public function viewElements(FieldItemListInterface $items, $langcode) {
-        $elements = [];
+      
+      $elements = [];
 
-        foreach ($items as $delta => $item) {
+      foreach ($items as $delta => $item) {
+
+        if (!empty($item->icon_select)) {
+
+          $elements[$delta] = [
+            '#theme' => 'icons_template',
+            '#class_icon' => $item->icon_select,
+            '#name_icon' => ucfirst(str_replace('icon-', '', $item->icon_select)),
+          ];
+
+        } else {
 
           $elements[$delta] = [
             '#theme' => 'icons_template',
             '#class_icon' => 'uncategorized',
           ];
 
-          if (!empty($item->icon_select)) {
-
-            $elements[$delta] = [
-              '#theme' => 'icons_template',
-              '#class_icon' => $item->icon_select, 
-            ];
-
-          }
-
-          return $elements;
-            
         }
+
+        return $elements;
+          
+      }
 
     }
 
