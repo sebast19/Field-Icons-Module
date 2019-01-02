@@ -1,0 +1,7 @@
+field.widget.settings.icons_widget_default:
+  type: mapping
+  label: 'default custom widget settings'
+  mapping:
+    size:
+      type: integer
+      label: 'Size'

@@ -30,11 +30,28 @@ class FieldIconsItem extends FieldItemBase {
             'columns' => [
                 'icon_select' => [
                     'type' => 'varchar',
-                    'length' => '255',
+                    'length' => '50',
                     'not null' => FALSE,
                 ],
+
+                'icon_color' => [
+                    'type' => 'varchar',
+                    'length' => '20',
+                    'not null' => TRUE,
+                ],
+
+                'icon_size' => [
+                    'type' => 'varchar',
+                    'length' => '5',
+                    'not null' => TRUE,
+                ],
             ],
-            'indexes' => [],
+
+            'indexes' => [
+                'icon_select' => 'icon_select',
+                'icon_color' => 'icon_color',
+                'icon_size' => 'icon_size',
+            ],
         ];
 
     }
@@ -44,8 +61,15 @@ class FieldIconsItem extends FieldItemBase {
      */
     public static function propertyDefinitions(FieldStorageDefinitionInterface $field_definition) {
         $properties = [];
+        
         $properties['icon_select'] = DataDefinition::create('string')
-          ->setlabel(t('Icons Field'));
+            ->setlabel(t('Icons Field'));
+
+        $properties['icon_color'] = DataDefinition::create('string')
+            ->setlabel(t('Icons Color'));
+
+        $properties['icon_size'] = DataDefinition::create('string')
+            ->setlabel(t('Icons Size'));
 
         return $properties;
     }
