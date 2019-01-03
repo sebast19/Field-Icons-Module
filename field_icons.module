@@ -10,6 +10,8 @@
        'variables' => [
          'class_icon' => '',
          'name_icon' => '',
+         'color_icon' => 'black',
+         'size_icon' => '',
        ],
      ],
    ];   

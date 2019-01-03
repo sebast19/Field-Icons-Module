@@ -30,28 +30,24 @@ class FieldIconsItem extends FieldItemBase {
             'columns' => [
                 'icon_select' => [
                     'type' => 'varchar',
-                    'length' => '50',
+                    'length' => '60',
                     'not null' => FALSE,
                 ],
 
                 'icon_color' => [
                     'type' => 'varchar',
                     'length' => '20',
-                    'not null' => TRUE,
+                    'not null' => FALSE,
                 ],
 
                 'icon_size' => [
-                    'type' => 'varchar',
-                    'length' => '5',
-                    'not null' => TRUE,
+                    'type' => 'int',
+                    'length' => 'tiny',
+                    'not null' => FALSE,
                 ],
             ],
 
-            'indexes' => [
-                'icon_select' => 'icon_select',
-                'icon_color' => 'icon_color',
-                'icon_size' => 'icon_size',
-            ],
+            'indexes' => [],
         ];
 
     }

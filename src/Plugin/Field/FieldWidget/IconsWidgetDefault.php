@@ -25,62 +25,41 @@ class IconsWidgetDefault extends WidgetBase {
      */
     public function formElement(FieldItemListInterface $items, $delta, array $element, array &$form, FormStateInterface $form_state){
 
-        $field_helper = \Drupal::service('field_icons.helper')->getIcons();
+        $field_helper = \Drupal::service('field_icons.helper');
 
         $default_value = isset($items[$delta]->icon_select) ? $items[$delta]->icon_select: ''; 
 
         $element['icon_select'] = [
             '#type' => 'select',
-            '#description' => 'Add new content type of <strong><em>Add New Icon</em></strong> for add more icons to the list',
-            '#empty_option' => t('-None-'),
+            '#description' => $this->t('Add new content type of <strong><em>New Icon</em></strong> for add more icons to the list.'),
+            '#empty_option' => $this->t('-None-'),
             '#default_value' => $default_value,
-            '#options' => $field_helper,
-            '#title' => t('Icon Category'),
+            '#options' => $field_helper->getIcons(),
+            '#title' => $this->t('Icon Category'),
         ];
 
         $element['icon_color'] = [
-            '#type' => 'number',
-            '#min' => 15,
-            '#max' => 99,
-            '#title' => 'Icon Color',
+            '#type' => 'select',
+            '#description' => $this->t('Select the color for the icon, if you leave it as default it will take the black color.'),
+            '#empty_option' => $this->t('-Default-'),
+            '#default_value' => isset($items[$delta]->icon_color) ? $items[$delta]->icon_color: '',
+            '#options' => [
+                'red' => 'Red',
+                'green' => 'Green',
+            ],
+            '#title' => $this->t('Icon Color'),
         ];
 
         $element['icon_size'] = [
             '#type' => 'number',
+            '#description' => $this->t('Indicates the size of the icon, the <em>minimum 15 and the maximum 99</em>'),
+            '#default_value' => isset($items[$delta]->icon_size) ? $items[$delta]->icon_size: '20',
             '#min' => 15,
-            '#max' => 99,
-            '#title' => 'Icon Size',
+            '#max' => 50,
+            '#title' => $this->t('Icon Size'),
         ];
         
         return $element;
-    }
-
-    /**
-     * {@inheritdoc}
-     */
-    public static function defaultSettings() {
-
-        return [
-            'size' => 60,
-        ] + parent::defaultSettings();
-
-    }
-
-    /**
-     * {@inheritdoc}
-     */
-    public function settingsForm(array $form, FormStateInterface $form_state) {
-
-        $element['size'] = [
-            '#type' => 'number',
-            '#title' => t('Size of textfield'),
-            '#default_value' => $this->getSetting('size'),
-            '#required' => TRUE,
-            '#min' => 1,
-          ];
-        
-          return $element;
-
     }
 
 }

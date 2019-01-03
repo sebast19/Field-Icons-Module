@@ -27,45 +27,34 @@
 /* own styles for the module field icons and twig template */
 
 .icon-container {
-  border: 1px solid lightgrey;
-  border-radius: 10px;
-  height: 50px;
-  line-height: 50px;
-  text-align: center;
-  font-size: 1.3em;
-  margin-bottom: 15px;
+  font-size: 20px;
+  margin: 15px 0 15px 0;
+  line-height: 1;
 }
 
 /* styles of fonts */
 
 .icon-terror:before {
   content: "\e900";
-  color: #1b1b1b;
 }
 .icon-adventure:before {
   content: "\e901";
-  color: rgb(23, 177, 23);
 }
 .icon-uncategorized:before {
   content: "\e902";
 }
 .icon-cartoon:before {
   content: "\e916";
-  color: rgb(250, 236, 48);
 }
 .icon-fantasy:before {
   content: "\e997";
-  color: rgb(124, 20, 110);
 }
 .icon-sci-fi:before {
   content: "\e9a5";
-  color: rgb(22, 150, 189);
 }
 .icon-accion:before {
   content: "\e9a9";
-  color: #ff8000;
 }
 .icon-tutorial:before {
   content: "\e9d2";
-  color: rgb(15, 80, 133);
 }

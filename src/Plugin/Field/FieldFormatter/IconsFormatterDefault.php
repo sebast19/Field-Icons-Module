@@ -10,7 +10,7 @@ use Drupal\Core\Field\FieldItemListInterface;
  *
  * @FieldFormatter(
  *    id = "icons_formatter_default",               
- *    label = @Translation("Default Icons Size 30px"),
+ *    label = @Translation("Default Icons Size 20px"),
  *    field_types = {
  *      "field_icons_item"
  *    }
@@ -33,6 +33,8 @@ class IconsFormatterDefault extends FormatterBase {
             '#theme' => 'icons_template',
             '#class_icon' => $item->icon_select,
             '#name_icon' => ucfirst(str_replace('icon-', '', $item->icon_select)),
+            '#color_icon' => $item->icon_color,
+            '#size_icon' => $item->icon_size,
           ];
 
         } else {
