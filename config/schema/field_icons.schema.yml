@@ -1,0 +1,7 @@
+field.formatter.settings.icons_formatter_default:
+  type: mapping
+  label: 'Default formatter settings'
+  mapping:
+    size:
+      type: integer
+      label: 'Size Icon'

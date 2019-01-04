@@ -18,7 +18,6 @@ use Drupal\Core\TypedData\DataDefinition;
  *     default_formatter = "icons_formatter_default"
  * )
  */
-
 class FieldIconsItem extends FieldItemBase {
 
     /**
@@ -39,12 +38,6 @@ class FieldIconsItem extends FieldItemBase {
                     'length' => '20',
                     'not null' => FALSE,
                 ],
-
-                'icon_size' => [
-                    'type' => 'int',
-                    'length' => 'tiny',
-                    'not null' => FALSE,
-                ],
             ],
 
             'indexes' => [],
@@ -63,9 +56,6 @@ class FieldIconsItem extends FieldItemBase {
 
         $properties['icon_color'] = DataDefinition::create('string')
             ->setlabel(t('Icons Color'));
-
-        $properties['icon_size'] = DataDefinition::create('string')
-            ->setlabel(t('Icons Size'));
 
         return $properties;
     }

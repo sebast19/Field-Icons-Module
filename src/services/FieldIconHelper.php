@@ -66,10 +66,10 @@ class FieldIconHelper {
   }
 
   /**
-   * Load the options(List of values) of the Select Element.
+   * Load the options(List of values) of the Select Element in the Widget.
    *
    * @return array $icons_data
-   *  array with the options to show in the select Element and the twig template.          
+   *    array with the options to show in the select Element and the twig template.          
    */
   public function getIcons() {
 
@@ -98,6 +98,27 @@ class FieldIconHelper {
     }         
        
     return $icons_data;
+
+  }
+  /**
+   * Gets the color to load for apply to icons in Widget select list.
+   * 
+   * @return array 
+   *    array with the options(colors) to load in the widget icon_color.
+   */
+  public function getColors() {
+
+    return [
+        'blue' => 'Blue',
+        'red' => 'Red',
+        'green' => 'Green',
+        'orange' => 'Orange',
+        'darkcyan' => 'Dark Cyan',
+        'darkslateblue' => 'Dark Slate Blue',
+        'blueviolet' => 'Blue Violet',
+        'purple' => 'Purple',
+        'brown' => 'Brown', 
+    ];  
 
   }
   
